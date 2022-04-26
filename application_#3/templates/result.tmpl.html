@@ -1,0 +1,21 @@
+<html>
+{{template "header.tmpl.html"}}
+
+<body>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1>Your Number: {{.Number}}</h1>
+    </div>
+  </div>
+  <div style="display: table; margin-right: auto; margin-left: auto;">
+    <h2>Leader Board</h2>
+
+    <ol>
+      {{range .Users}}
+      <li>{{.Name}}: {{.Score}}</li>
+      {{end}}
+    </ol>
+  </div>
+</body>
+
+</html>

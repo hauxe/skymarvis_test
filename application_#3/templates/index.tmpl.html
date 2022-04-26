@@ -1,0 +1,28 @@
+<html>
+{{template "header.tmpl.html"}}
+
+<body>
+  <script>
+    function validateForm() {
+      let x = document.forms["myForm"]["name"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+  </script>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <a href="/" class="lang-logo">
+        <img src="/static/lang-logo.png">
+      </a>
+      <h1>Random Number Game</h1>
+    </div>
+  </div>
+  <form name="myForm" action="/result" onsubmit="return validateForm()" method="get" style="text-align: center;">
+    Name: <input type="text" name="name">
+    <input type="submit" value="Play">
+  </form>
+</body>
+
+</html>
